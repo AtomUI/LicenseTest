@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <IsPackable>false</IsPackable>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <AtomUIApplicationId>atomui-datagrid-license-test</AtomUIApplicationId>
+    <AtomUILicenseTrialAllowed>false</AtomUILicenseTrialAllowed>
+    <AtomUILicenseServer>https://localhost:44339</AtomUILicenseServer>
+    <AtomUILicenseAuthority>https://localhost:44340</AtomUILicenseAuthority>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Desktop" Version="12.1.1" />
+    <PackageReference Include="AtomUI.Desktop.Controls.DataGrid.Commercial" Version="1.0.0-local.20261029.1" />
+    <!-- 钉住 SDK 版本：商业控件包给出 [1.0.0-local.21, 2.0.0) 区间，NuGet 会取最低可用版本。
+         local.21 起信任锚编译进 SDK（含本地服务端签名密钥 dev-local-license-2026-10），
+         控件运行时自检许可，应用无需也无法配置公钥。 -->
+    <PackageReference Include="AtomUI.License" Version="1.0.0-local.21" />
+  </ItemGroup>
+</Project>

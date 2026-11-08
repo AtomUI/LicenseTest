@@ -1,0 +1,17 @@
+<atom:Window xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:atom="https://atomui.net"
+             xmlns:grid="clr-namespace:AtomUI.Desktop.Controls;assembly=AtomUI.Desktop.Controls.DataGrid"
+             x:Class="AtomUI.DataGrid.LicenseTest.MainWindow"
+             Title="DataGrid 商业控件测试"
+             Width="1120" Height="760"
+             MinWidth="900" MinHeight="540"
+             WindowStartupLocation="CenterScreen">
+    <Grid RowDefinitions="Auto,*" Margin="24">
+        <StackPanel Margin="0,0,0,18" Spacing="6">
+            <atom:TextBlock Text="员工信息列表" FontSize="24" FontWeight="SemiBold" />
+            <atom:TextBlock Text="20 条示例数据 · AtomUI DataGrid Commercial" Opacity="0.65" />
+        </StackPanel>
+        <grid:DataGrid x:Name="EmployeeGrid" Grid.Row="1" />
+    </Grid>
+</atom:Window>

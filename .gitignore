@@ -1,0 +1,12 @@
+# Build outputs
+bin/
+obj/
+# Project-local NuGet cache (NuGet.Config globalPackagesFolder)
+.packages/
+# IDE state
+.idea/
+*.user
+# License credentials must never be committed
+*.license
+deployment.license
+developer.license
